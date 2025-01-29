@@ -6,13 +6,36 @@
 /* Universal Styles */
 body {
   @apply p-0 m-0; /* Apply zero padding and margin globally */
+  font-family: "Poppins", serif;
 }
 
 /* Navbar */
-nav {
-  background-color: #30274a;
-}
-
 #logo {
   height: 55px;
+}
+
+/* Main */
+#hero-section {
+  text-align: center;
+}
+
+.profile-img {
+  width: 300px;
+  margin: 10px auto;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animated-gradient {
+  background-size: 200% auto;
+  animation: gradientShift 3s linear infinite;
 }

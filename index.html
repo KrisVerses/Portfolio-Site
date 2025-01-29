@@ -3,25 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./src/output.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- Header -->
     <header>
       <nav
-        class="w-full bg-gradient-to-r from-[#2a1d47] to-[#1a102d] p-4 text-white"
+        class="w-full bg-gradient-to-r from-blue-900 to-[#1a102d] p-4 text-white"
       >
         <div class="flex justify-between items-center max-w-4xl mx-auto w-full">
           <div class="flex items-center space-x-4">
             <img src="./src/images/KrisVersesLogo1.png" id="logo" alt="Logo" />
           </div>
           <ul class="flex space-x-6">
-            <li><a href="#" class="hover:text-gray-300">About</a></li>
-            <li><a href="#" class="hover:text-gray-300">Projects</a></li>
-            <li><a href="#" class="hover:text-gray-300">Blog</a></li>
-            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 hover:underline transition-all"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 hover:underline transition-all"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 hover:underline transition-all"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 hover:underline transition-all"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
     </header>
+
+    <!-- Main -->
+    <main>
+      <section
+        id="hero-section"
+        class="bg-gradient-to-b from-gray-50 to-gray-200 p-6"
+      >
+        <h1
+          class="m-6 text-5xl font-extrabold hover:scale-105 transition-all duration-300 ease-in-out tracking-wide"
+        >
+          Code. Grow. Create.
+        </h1>
+        <img
+          class="rounded-full p-[5px] bg-blue-600 to-orange-500 profile-img"
+          src="./src/images/selfie.JPG"
+          alt="Kris Norful looking at camera for selfie"
+        />
+        <h1 class="text-4xl font-bold">
+          Hey there, I'm
+          <span
+            class="bg-gradient-to-r from-orange-500 via-blue-500 to-gray-700 bg-clip-text text-transparent"
+            >Kris Norful</span
+          >👋
+        </h1>
+        <p class="text-lg md:text-xl text-gray-700">
+          I craft clean, user-friendly, and visually striking digital
+          experiences. Let’s build something amazing together.
+        </p>
+        <button
+          class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all transform hover:scale-105 mt-4"
+        >
+          <p class="text-white font-semibold tracking-wide cursor-pointer">
+            Explore My Work
+          </p>
+        </button>
+      </section>
+    </main>
   </body>
 </html>
