@@ -15,13 +15,19 @@ body {
 }
 
 /* Main */
-#hero-section {
+#hero-section,
+#projects-section {
   text-align: center;
 }
 
 .profile-img {
   width: 300px;
   margin: 10px auto;
+}
+
+/* Projects */
+.project-card {
+  width: 300px;
 }
 
 @keyframes gradientShift {
