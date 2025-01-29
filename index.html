@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kris Norful: Home Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,43 +11,40 @@
       rel="stylesheet"
     />
     <link href="./src/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./src/images/KrisVersesLogo1.png" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav
-        class="w-full bg-gradient-to-r from-blue-900 to-[#1a102d] p-4 text-white"
+        class="w-full bg-gradient-to-r from-blue-900 to-[#101935] p-4 text-white"
       >
         <div class="flex justify-between items-center max-w-4xl mx-auto w-full">
-          <div class="flex items-center space-x-4">
-            <img src="./src/images/KrisVersesLogo1.png" id="logo" alt="Logo" />
-          </div>
-          <ul class="flex space-x-6">
+          <a href="index.html" class="flex items-center space-x-2">
+            <img
+              src="./src/images/KrisVersesLogo1.png"
+              alt="Kris Norful Logo"
+              class="h-8 w-8"
+            />
+            <span class="text-white font-bold text-lg font-semibold"
+              >Kris Norful</span
+            >
+          </a>
+          <ul class="flex space-x-6 text-lg font-medium">
             <li>
-              <a
-                href="#"
-                class="hover:text-orange-500 hover:underline transition-all"
-                >About</a
-              >
+              <a href="#" class="hover:text-orange-500 transition-all">About</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-orange-500 hover:underline transition-all"
+              <a href="#projects" class="hover:text-orange-500 transition-all"
                 >Projects</a
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-orange-500 hover:underline transition-all"
-                >Blog</a
-              >
+              <a href="#" class="hover:text-orange-500 transition-all">Blog</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="hover:text-orange-500 hover:underline transition-all"
+              <a href="#" class="hover:text-orange-500 transition-all"
                 >Contact</a
               >
             </li>
@@ -57,44 +55,90 @@
 
     <!-- Main -->
     <main>
+      <!-- Hero S -->
       <section
-        id="hero-section"
-        class="bg-gradient-to-b from-gray-50 to-gray-200 p-6"
+        class="relative text-center py-28 bg-gradient-to-b from-gray-100 to-gray-200"
       >
-        <h1
-          class="m-6 text-5xl font-extrabold hover:scale-105 transition-all duration-300 ease-in-out tracking-wide"
+        <!-- Background Wave -->
+        <div class="absolute bottom-0 left-0 w-full shadow-md">
+          <svg viewBox="0 0 1440 320" class="h-auto wave-shadow wave-animation">
+            <path
+              fill="#bfc5cc"
+              d="M0,160Q360,240,720,220T1440,320V320H0Z"
+            ></path>
+          </svg>
+        </div>
+
+        <div
+          class="fixed top-1/2 left-4 transform -translate-y-1/2 flex flex-col space-y-3 z-50 backdrop-blur-lg bg-white/20 p-2 rounded-lg shadow-lg"
         >
+          <a href="https://twitter.com/yourprofile" target="_blank">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg"
+              class="h-8 w-8 hover:scale-110 transition duration-300"
+              alt="Twitter"
+            />
+          </a>
+
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+              class="h-8 w-8 hover:scale-110 transition duration-300"
+              alt="LinkedIn"
+            />
+          </a>
+
+          <a href="https://youtube.com/@yourchannel" target="_blank">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg"
+              class="h-8 w-8 hover:scale-110 transition duration-300"
+              alt="YouTube"
+            />
+          </a>
+
+          <a href="https://twitch.tv/yourchannel" target="_blank">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg"
+              class="h-8 w-8 hover:scale-110 transition duration-300"
+              alt="Twitch"
+            />
+          </a>
+        </div>
+
+        <h1 class="text-5xl font-extrabold text-gray-900 mb-4 fade-in">
           Code. Grow. Create.
         </h1>
-        <img
-          class="rounded-full p-[5px] bg-blue-600 to-orange-500 profile-img"
-          src="./src/images/selfie.JPG"
-          alt="Kris Norful looking at camera for selfie"
-        />
-        <h1 class="text-4xl font-bold">
-          Hey there, I'm
-          <span
-            class="bg-gradient-to-r from-orange-500 via-blue-500 to-gray-700 bg-clip-text text-transparent"
-            >Kris Norful</span
-          >👋
-        </h1>
-        <p class="text-lg md:text-xl text-gray-700">
-          I craft clean, user-friendly, and visually striking digital
-          experiences. Let’s build something amazing together.
-        </p>
-        <button
-          class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all transform hover:scale-105 mt-4"
-        >
-          <p class="text-white font-semibold tracking-wide cursor-pointer">
-            Explore My Work
+
+        <div class="flex flex-col items-center space-y-4">
+          <img
+            src="./src/images/selfie.JPG"
+            alt="Kris Norful"
+            class="w-40 h-40 rounded-full border-6 border-white shadow-lg mt-6"
+          />
+
+          <h2 class="text-3xl font-bold text-gray-800">KRIS NORFUL</h2>
+
+          <p class="text-lg text-gray-600 max-w-lg">
+            I craft
+            <span class="font-semibold"
+              >clean, user-friendly, and visually striking</span
+            >
+            digital experiences. Let’s build something amazing together.
           </p>
-        </button>
+
+          <a
+            href="#projects"
+            class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105"
+          >
+            Explore My Work
+          </a>
+        </div>
       </section>
 
       <!-- Projects -->
-      <section id="projects-section" class="py-12">
+      <section id="projects" class="py-12">
         <h2
-          class="m-6 text-5xl font-extrabold text-center hover:scale-105 transition-all duration-300 ease-in-out tracking-wide"
+          class="m-6 text-5xl font-extrabold text-center hover:scale-105 duration-300 ease-in-out tracking-wide"
         >
           Projects
         </h2>
@@ -118,24 +162,30 @@
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
           <!-- Project 1: Jammming -->
-          <article class="group relative overflow-hidden rounded-lg shadow-lg">
-            <div class="relative w-full h-64">
+          <article
+            class="group relative overflow-hidden rounded-lg shadow-lg fade-in"
+          >
+            <div
+              class="relative w-full h-64 overflow-hidden group transition-transform duration-300 group-hover:scale-105"
+            >
               <img
-                class="rounded-md w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="w-full h-full object-cover"
                 src="https://knorful.github.io/my-page/static/media/jammming.cf646e01.jpg"
-                alt="Jammming"
+                alt="Project Image"
               />
+
+              <!-- Overlay (Now scales with the parent) -->
               <div
-                class="absolute inset-0 bg-black/50 rounded-md opacity-0 group-hover:opacity-100 transition-opacity"
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"
               ></div>
+
               <div class="absolute inset-0 flex items-center justify-center">
-                <h2
-                  class="text-white text-2xl font-bold group-hover:scale-110 transition-transform"
-                >
+                <h2 class="text-white text-2xl font-bold transition-transform">
                   Jammming
                 </h2>
               </div>
             </div>
+
             <div class="text-center p-4">
               <h3 class="text-xl font-bold">Jammming</h3>
               <p class="text-gray-600">
