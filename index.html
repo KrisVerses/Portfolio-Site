@@ -18,14 +18,14 @@
     <!-- Header -->
     <header>
       <nav
-        class="w-full bg-gradient-to-r from-blue-900 to-[#101935] p-4 text-white"
+        class="w-full bg-gradient-to-r from-[#3A4750] to-[#101935] p-4 text-white bg-[#2C3E50] shadow-md"
       >
         <div class="flex justify-between items-center max-w-4xl mx-auto w-full">
           <a href="index.html" class="flex items-center space-x-2">
             <img
               src="./src/images/KrisVersesLogo1.png"
               alt="Kris Norful Logo"
-              class="h-8 w-8"
+              class="h-10 w-10"
             />
             <span class="text-white font-bold text-lg font-semibold"
               >Kris Norful</span
@@ -63,12 +63,12 @@
         <div class="absolute bottom-0 left-0 w-full shadow-md">
           <svg viewBox="0 0 1440 320" class="h-auto wave-shadow wave-animation">
             <path
-              fill="#bfc5cc"
+              fill="#b0bec5"
               d="M0,160Q360,240,720,220T1440,320V320H0Z"
             ></path>
           </svg>
         </div>
-
+        <!-- Social Links -->
         <div
           class="fixed top-1/2 left-4 transform -translate-y-1/2 flex flex-col space-y-3 z-50 backdrop-blur-lg bg-white/20 p-2 rounded-lg shadow-lg"
         >
@@ -113,7 +113,7 @@
           <img
             src="./src/images/selfie.JPG"
             alt="Kris Norful"
-            class="w-40 h-40 rounded-full border-6 border-white shadow-lg mt-6"
+            class="w-40 h-40 rounded-full border-6 border-white shadow-lg mt-6 grayscale hover:grayscale-0 transition duration-500 ease-in-out"
           />
 
           <h2 class="text-3xl font-bold text-gray-800">KRIS NORFUL</h2>
@@ -136,57 +136,62 @@
       </section>
 
       <!-- Projects -->
-      <section id="projects" class="py-12">
-        <h2
-          class="m-6 text-5xl font-extrabold text-center hover:scale-105 duration-300 ease-in-out tracking-wide"
-        >
-          Projects
-        </h2>
+      <section class="container mx-auto px-4 py-12">
+        <!-- Section Title -->
+        <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
 
-        <!-- Filter Buttons -->
-        <div class="flex justify-center space-x-3 mb-6">
-          <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+        <!-- Filters -->
+        <div class="flex justify-center space-x-3 mb-8">
+          <button
+            class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition filter-btn"
+            data-filter="all"
+          >
             All
           </button>
-          <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+          <button
+            class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition filter-btn"
+            data-filter="frontend"
+          >
             Frontend
           </button>
-          <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+          <button
+            class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition filter-btn"
+            data-filter="backend"
+          >
             Backend
           </button>
-          <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+          <button
+            class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition filter-btn"
+            data-filter="fullstack"
+          >
             Full Stack
           </button>
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 projects"
+        >
           <!-- Project 1: Jammming -->
           <article
-            class="group relative overflow-hidden rounded-lg shadow-lg fade-in"
+            class="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl project-card"
+            data-category="frontend"
           >
-            <div
-              class="relative w-full h-64 overflow-hidden group transition-transform duration-300 group-hover:scale-105"
-            >
+            <!-- Background Image with Overlay -->
+            <div class="relative h-64 overflow-hidden">
               <img
-                class="w-full h-full object-cover"
-                src="https://knorful.github.io/my-page/static/media/jammming.cf646e01.jpg"
-                alt="Project Image"
+                src="https://sonics.surge.sh/static/media/background-photo2.cf646e01.jpg"
+                alt="Jammming Project"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
               />
-
-              <!-- Overlay (Now scales with the parent) -->
               <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"
-              ></div>
-
-              <div class="absolute inset-0 flex items-center justify-center">
-                <h2 class="text-white text-2xl font-bold transition-transform">
-                  Jammming
-                </h2>
+                class="absolute inset-0 bg-black/50 flex items-center justify-center"
+              >
+                <h2 class="text-white text-2xl font-bold">Jammming</h2>
               </div>
             </div>
-
-            <div class="text-center p-4">
+            <!-- Project Description -->
+            <div class="text-center p-4 bg-white">
               <h3 class="text-xl font-bold">Jammming</h3>
               <p class="text-gray-600">
                 A Spotify playlist creator using React.
@@ -196,20 +201,65 @@
               </p>
               <div class="flex justify-center space-x-4 mt-3">
                 <a
-                  href="https://sonics.surge.sh/"
-                  class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+                  href="#"
+                  class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
                   >Live Demo</a
                 >
                 <a
-                  href="https://github.com/knorful/Jamming"
-                  class="px-4 py-2 border border-gray-500 rounded-lg hover:bg-gray-200"
+                  href="#"
+                  class="px-4 py-2 border border-gray-500 rounded-lg hover:bg-gray-200 transition"
                   >GitHub</a
                 >
               </div>
             </div>
           </article>
 
-          <!-- Add more projects here with the same structure -->
+          <!-- Project 2: Reddit Minimal -->
+          <article
+            class="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl project-card"
+            data-category="frontend"
+          >
+            <!-- Background with Icon -->
+            <div
+              class="relative bg-orange-500 h-64 flex flex-col items-center justify-center"
+            >
+              <div class="p-3 bg-white rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-8 w-8 text-orange-500"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M19.36 10.46a2.51 2.51 0 0 0-1.77-.73h-.08a2.54 2.54 0 0 0-1.89.86 8.18 8.18 0 0 0-4.64 0 2.54 2.54 0 0 0-1.89-.86h-.08a2.51 2.51 0 0 0-1.77.73 2.46 2.46 0 0 0-.72 1.78c0 2.23 2.45 4.17 5 4.44v.9H8.5a.75.75 0 1 0 0 1.5h7a.75.75 0 1 0 0-1.5h-2.74v-.9c3.02-.25 5.47-2.07 5.47-4.3a2.46 2.46 0 0 0-.72-1.78zM9.25 13a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm5.5 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h2 class="text-white text-2xl font-bold mt-2">Reddit Minimal</h2>
+            </div>
+            <!-- Project Description -->
+            <div class="text-center p-4 bg-white">
+              <h3 class="text-xl font-bold">Reddit Minimal</h3>
+              <p class="text-gray-600">Unofficial Reddit Frontend Concept</p>
+              <p class="text-sm text-gray-500 mt-1">
+                Built with: React, React Router, Redux, Reddit API, Material UI
+              </p>
+              <div class="flex justify-center space-x-4 mt-3">
+                <a
+                  href="#"
+                  class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
+                  >Live Demo</a
+                >
+                <a
+                  href="#"
+                  class="px-4 py-2 border border-gray-500 rounded-lg hover:bg-gray-200 transition"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </main>
